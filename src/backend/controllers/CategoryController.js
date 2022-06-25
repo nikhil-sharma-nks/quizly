@@ -42,7 +42,6 @@ export const getAllCategoriesHandler = function (schema, request) {
 
 export const getCategoryHandler = function (schema, request) {
   const user = requiresAuth.call(this, request);
-  console.log({ user });
   if (user) {
     const { categoryId } = request.params;
     console.log({ categoryId });
