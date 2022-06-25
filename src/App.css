@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+:root {
+  font-family: 'Inter', sans-serif;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-black: 900;
+
+  /* COLORS */
+  --primary-color: #3f37c9;
+  --secondary-color: #00afb9;
+  --success: #4caf50;
+  --error: #f05454;
+  --warning: #ff9f45;
+  --white: #fff;
+  --black: #212529;
+  --bg-grey: #eceae8;
+  --text-grey: #9a9a9a;
+
+  --default-transition: all 0.5s ease-in-out;
+  --grid-template: repeat(12, 1fr);
+  --grid-child-1: 1 / span 3;
+  --grid-child-2: 4 / span 9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.theme-dark {
+  --background-color: #1a202c;
+  --body-background-color: #262d3a;
+  --text-color: #ffffff;
+  --background-color-secondary: hsl(0, 0%, 37%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.theme-light {
+  --background-color: #ffffff;
+  --body-background-color: #f1eaea;
+  --text-color: #030303;
+  --background-color-secondary: rgba(0, 0, 0, 0.05);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-body {
+  color: var(--text-color);
+  background-color: var(--body-background-color);
+  min-height: calc(100vh - 4rem);
+  transition: var(--default-transition);
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.app-body {
+  display: grid;
+  grid-template-columns: var(--grid-template);
+  min-height: calc(100vh - 4rem);
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.color-primary {
+  color: var(--primary-color);
+}
+.color-secondary {
+  color: var(--secondary-color);
+}
+.color-white {
+  color: var(--white);
+}
+.color-black {
+  color: var(--black);
+}
+.color-error {
+  color: var(--error);
+}
+.color-success {
+  color: var(--success);
+}
+.color-warning {
+  color: var(--warning);
 }
