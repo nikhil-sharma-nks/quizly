@@ -25,7 +25,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'easy',
         question:
-          'The programming language &#039;Swift&#039; was created to replace what other programming language?',
+          'The programming language  Swift  was created to replace what other programming language?',
         correct_answer: 'Objective-C',
         incorrect_answers: ['C#', 'Ruby', 'C++'],
       },
@@ -54,7 +54,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'easy',
         question:
-          'If you were to code software in this language you&#039;d only be able to type 0&#039;s and 1&#039;s.',
+          'If you were to code software in this language you d only be able to type 0 s and 1 s.',
         correct_answer: 'Binary',
         incorrect_answers: ['JavaScript', 'C++', 'Python'],
       },
@@ -103,7 +103,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'Moore&#039;s law originally stated that the number of transistors on a microprocessor chip would double every...',
+          'Moore s law originally stated that the number of transistors on a microprocessor chip would double every...',
         correct_answer: 'Year',
         incorrect_answers: ['Four Years', 'Two Years', 'Eight Years'],
       },
@@ -163,7 +163,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'Nvidia&#039;s headquarters are based in which Silicon Valley city?',
+          'Nvidia s headquarters are based in which Silicon Valley city?',
         correct_answer: 'Santa Clara',
         incorrect_answers: ['Palo Alto', 'Cupertino', 'Mountain View'],
       },
@@ -437,7 +437,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'hard',
         question:
-          'Released in 2001, the first edition of Apple&#039;s Mac OS X operating system (version 10.0) was given what animal code name?',
+          'Released in 2001, the first edition of Apple s Mac OS X operating system (version 10.0) was given what animal code name?',
         correct_answer: 'Cheetah',
         incorrect_answers: ['Puma', 'Tiger', 'Leopard'],
       },
@@ -537,7 +537,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'easy',
         question:
-          'What does the &#039;S&#039; stand for in the abbreviation SIM, as in SIM card? ',
+          'What does the  S  stand for in the abbreviation SIM, as in SIM card? ',
         correct_answer: 'Subscriber',
         incorrect_answers: ['Single', 'Secure', 'Solid'],
       },
@@ -567,7 +567,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'easy',
         question:
-          'What type of animal was Harambe, who was shot after a child fell into it&#039;s enclosure at the Cincinnati Zoo?',
+          'What type of animal was Harambe, who was shot after a child fell into it s enclosure at the Cincinnati Zoo?',
         correct_answer: 'Gorilla',
         incorrect_answers: ['Tiger', 'Panda', 'Crocodile'],
       },
@@ -625,7 +625,7 @@ export const quizzes = [
         difficulty: 'easy',
         question: 'Which candy is NOT made by Mars?',
         correct_answer: 'Almond Joy',
-        incorrect_answers: ['M&amp;M&#039;s', 'Twix', 'Snickers'],
+        incorrect_answers: ['M&amp;M s', 'Twix', 'Snickers'],
       },
       {
         category: 'General Knowledge',
@@ -769,7 +769,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'What is the name of the popular animatronic singing fish prop, singing such hits such as Don&#039;t Worry, Be Happy?',
+          'What is the name of the popular animatronic singing fish prop, singing such hits such as Don t Worry, Be Happy?',
         correct_answer: 'Big Mouth Billy Bass',
         incorrect_answers: ['Big Billy Bass', 'Singing Fish', 'Sardeen'],
       },
@@ -778,7 +778,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'According to the United States&#039; CDC, one in how many Americans die annually due to smoking?',
+          'According to the United States  CDC, one in how many Americans die annually due to smoking?',
         correct_answer: 'Five',
         incorrect_answers: ['Twenty', 'Ten', 'One hundred'],
       },
@@ -817,7 +817,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'Which of the General Mills Corporation&#039;s monster cereals was the last to be released in the 1970&#039;s?',
+          'Which of the General Mills Corporation s monster cereals was the last to be released in the 1970 s?',
         correct_answer: 'Fruit Brute',
         incorrect_answers: ['Count Chocula', 'Franken Berry', 'Boo-Berry'],
       },
@@ -862,7 +862,7 @@ export const quizzes = [
         correct_answer: 'First Lord of the Treasury',
         incorrect_answers: [
           'Duke of Cambridge',
-          'Her Majesty&#039;s Loyal Opposition',
+          'Her Majesty s Loyal Opposition',
           'Manager of the Crown Estate',
         ],
       },
@@ -929,7 +929,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'hard',
         question:
-          'Virtual reality company Oculus VR lost which of it&#039;s co-founders in a freak car accident in 2013?',
+          'Virtual reality company Oculus VR lost which of it s co-founders in a freak car accident in 2013?',
         correct_answer: 'Andrew Scott Reisse',
         incorrect_answers: ['Nate Mitchell', 'Jack McCauley', 'Palmer Luckey'],
       },
@@ -958,7 +958,7 @@ export const quizzes = [
         incorrect_answers: [
           'The inability to make decisions',
           'The inability to concentrate on anything',
-          'A feverish desire to rip one&#039;s clothes off',
+          'A feverish desire to rip one s clothes off',
         ],
       },
       {
@@ -969,7 +969,7 @@ export const quizzes = [
         correct_answer: 'The inability to concentrate on anything',
         incorrect_answers: [
           'The inability to make decisions',
-          'A feverish desire to rip one&#039;s clothes off',
+          'A feverish desire to rip one s clothes off',
           'The inability to stand up',
         ],
       },
@@ -997,7 +997,7 @@ export const quizzes = [
           'What was the subject of the 2014 song CoCo by American rapper O. T. Genasis?',
         correct_answer: 'Cocaine',
         incorrect_answers: [
-          'Conan O&#039;Brien',
+          'Conan O Brien',
           'Cobalt(II) carbonate',
           'Coconut cream pie',
         ],
@@ -1035,7 +1035,7 @@ export const quizzes = [
         category: 'Entertainment: Music',
         type: 'multiple',
         difficulty: 'easy',
-        question: 'What was Daft Punk&#039;s first studio album?',
+        question: 'What was Daft Punk s first studio album?',
         correct_answer: 'Homework',
         incorrect_answers: [
           'Discovery',
@@ -1069,12 +1069,12 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'easy',
         question:
-          'What 1970&#039;s American ballad referred to the 1959 plane crash as the the day the music died?',
+          'What 1970 s American ballad referred to the 1959 plane crash as the the day the music died?',
         correct_answer: 'American Pie',
         incorrect_answers: [
           'Kentucky Rain',
           'I Will Always Love You',
-          'Rock &#039;n&#039; Roll Suicide',
+          'Rock  n  Roll Suicide',
         ],
       },
       {
@@ -1083,8 +1083,8 @@ export const quizzes = [
         difficulty: 'easy',
         question:
           'The British Invasion was a cultural phenomenon in music where British boy bands became popular in the USA in what decade?',
-        correct_answer: '60&#039;s',
-        incorrect_answers: ['50&#039;s', '40&#039;s', '30&#039;s'],
+        correct_answer: '60 s',
+        incorrect_answers: ['50 s', '40 s', '30 s'],
       },
       {
         category: 'Entertainment: Music',
@@ -1100,7 +1100,7 @@ export const quizzes = [
         difficulty: 'easy',
         question: 'Who is the lead singer of Arctic Monkeys?',
         correct_answer: 'Alex Turner',
-        incorrect_answers: ['Jamie Cook', 'Matt Helders', 'Nick O&#039;Malley'],
+        incorrect_answers: ['Jamie Cook', 'Matt Helders', 'Nick O Malley'],
       },
     ],
     medium: [
@@ -1148,8 +1148,8 @@ export const quizzes = [
         correct_answer: 'The Life of Pablo',
         incorrect_answers: [
           'Kill Urself My Man',
-          'You&#039;ll Cowards Don&#039;t Even Smoke Crack',
-          'Yo Wife Handcuffin&#039; Me',
+          'You ll Cowards Don t Even Smoke Crack',
+          'Yo Wife Handcuffin  Me',
         ],
       },
       {
@@ -1227,7 +1227,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'In which year was the Megadeth album Peace Sells... but Who&#039;s Buying? released?',
+          'In which year was the Megadeth album Peace Sells... but Who s Buying? released?',
         correct_answer: '1986',
         incorrect_answers: ['1979', '1987', '1983'],
       },
@@ -1265,7 +1265,7 @@ export const quizzes = [
         category: 'Entertainment: Music',
         type: 'multiple',
         difficulty: 'medium',
-        question: 'What is the opening track on Lorde&#039;s Pure Heroine?',
+        question: 'What is the opening track on Lorde s Pure Heroine?',
         correct_answer: 'Tennis Court',
         incorrect_answers: ['Team', 'Royals', '400 Lux'],
       },
@@ -1282,7 +1282,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'On the cover of &#039;Abbey Road,&#039; which of the Beatles is not wearing shoes?',
+          'On the cover of  Abbey Road,  which of the Beatles is not wearing shoes?',
         correct_answer: 'Paul McCartney',
         incorrect_answers: ['Ringo Starr', 'John Lennon', 'George Harrison'],
       },
@@ -1291,7 +1291,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'How many studio albums have the heavy metal band, &#039;Metallica&#039; released in the period between 1983 and 2016?',
+          'How many studio albums have the heavy metal band,  Metallica  released in the period between 1983 and 2016?',
         correct_answer: '10',
         incorrect_answers: ['7', '9', '12'],
       },
@@ -1321,7 +1321,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'The Proclaimers - I&#039;m Gonna Be (500 Miles) reached what position on the US Hot 100 Charts in 1993?',
+          'The Proclaimers - I m Gonna Be (500 Miles) reached what position on the US Hot 100 Charts in 1993?',
         correct_answer: '3rd',
         incorrect_answers: ['8th', '1st', '5th'],
       },
@@ -1366,7 +1366,7 @@ export const quizzes = [
         incorrect_answers: [
           'Smoke Weed 420 / Everyday',
           'Make Your Move 420 / My Mind',
-          'It&#039;s All In Your Head 420 / Understand',
+          'It s All In Your Head 420 / Understand',
         ],
       },
       {
@@ -1374,7 +1374,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'hard',
         question:
-          'In Kendrick Lamar&#039;s 2012 album, Good Kid, M.A.A.D City, the album&#039;s story takes place in which city?',
+          'In Kendrick Lamar s 2012 album, Good Kid, M.A.A.D City, the album s story takes place in which city?',
         correct_answer: 'Compton',
         incorrect_answers: ['Detroit', 'New York', 'Baltimore'],
       },
@@ -1382,8 +1382,7 @@ export const quizzes = [
         category: 'Entertainment: Music',
         type: 'multiple',
         difficulty: 'hard',
-        question:
-          'Which of Michael Jackson&#039;s albums sold the most copies?',
+        question: 'Which of Michael Jackson s albums sold the most copies?',
         correct_answer: 'Thriller',
         incorrect_answers: ['Dangerous', 'Bad', 'Off the Wall'],
       },
@@ -1413,8 +1412,7 @@ export const quizzes = [
         category: 'Entertainment: Music',
         type: 'multiple',
         difficulty: 'hard',
-        question:
-          'Bj&ouml;rk&#039;s Unison contains a sample of which Oval song?',
+        question: 'Bj&ouml;rk s Unison contains a sample of which Oval song?',
         correct_answer: 'Aero Deck',
         incorrect_answers: ['Textuell', 'Panorama', 'Do While'],
       },
@@ -1435,7 +1433,7 @@ export const quizzes = [
         category: 'Entertainment: Music',
         type: 'multiple',
         difficulty: 'hard',
-        question: 'What is the official name of Prince&#039;s backing band?',
+        question: 'What is the official name of Prince s backing band?',
         correct_answer: 'The Revolution',
         incorrect_answers: ['The Paupers', 'The Wailers', 'The Heartbreakers'],
       },
@@ -1464,7 +1462,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'hard',
         question:
-          'Panic! At the Disco&#039;s sixth album Pray For The Wicked was released on which date?',
+          'Panic! At the Disco s sixth album Pray For The Wicked was released on which date?',
         correct_answer: 'June 22, 2018',
         incorrect_answers: [
           'May 9, 2018',
@@ -1573,7 +1571,7 @@ export const quizzes = [
         category: 'Geography',
         type: 'multiple',
         difficulty: 'easy',
-        question: 'How many stars are featured on New Zealand&#039;s flag?',
+        question: 'How many stars are featured on New Zealand s flag?',
         correct_answer: '4',
         incorrect_answers: ['5', '2', '0'],
       },
@@ -1581,7 +1579,7 @@ export const quizzes = [
         category: 'Geography',
         type: 'multiple',
         difficulty: 'easy',
-        question: 'What is the name of New Zealand&#039;s indigenous people?',
+        question: 'What is the name of New Zealand s indigenous people?',
         correct_answer: 'Maori',
         incorrect_answers: ['Vikings', 'Polynesians', 'Samoans'],
       },
@@ -1734,7 +1732,7 @@ export const quizzes = [
         category: 'Geography',
         type: 'multiple',
         difficulty: 'medium',
-        question: 'Where is the &quot;Sonoran Desert&quot; located?',
+        question: 'Where is the  Sonoran Desert  located?',
         correct_answer: 'North America',
         incorrect_answers: ['South America', 'Asia', 'Africa'],
       },
@@ -1742,8 +1740,7 @@ export const quizzes = [
         category: 'Geography',
         type: 'multiple',
         difficulty: 'medium',
-        question:
-          'Which of these country&#039;s capitals starts with the letter B?',
+        question: 'Which of these country s capitals starts with the letter B?',
         correct_answer: 'Lebanon',
         incorrect_answers: ['Jordan', 'Kuwait', 'Qatar'],
       },
@@ -1760,7 +1757,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'Frankenmuth, a US city nicknamed &quot;Little Bavaria&quot;, is located in what state?',
+          'Frankenmuth, a US city nicknamed  Little Bavaria , is located in what state?',
         correct_answer: 'Michigan',
         incorrect_answers: ['Pennsylvania', 'Kentucky', 'Virginia'],
       },
@@ -1802,7 +1799,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question: 'What city is the Terracotta Army located in?',
-        correct_answer: 'Xi&#039;an',
+        correct_answer: 'Xi an',
         incorrect_answers: ['Beijing', 'Shanghai', 'Hong Kong'],
       },
       {
@@ -1914,7 +1911,7 @@ export const quizzes = [
         category: 'Geography',
         type: 'multiple',
         difficulty: 'hard',
-        question: 'What is Canada&#039;s largest island?',
+        question: 'What is Canada s largest island?',
         correct_answer: 'Baffin Island',
         incorrect_answers: [
           'Prince Edward Island',
@@ -1949,8 +1946,7 @@ export const quizzes = [
         category: 'Sports',
         type: 'multiple',
         difficulty: 'easy',
-        question:
-          'Which English football club has the nickname &#039;The Foxes&#039;?',
+        question: 'Which English football club has the nickname  The Foxes ?',
         correct_answer: 'Leicester City',
         incorrect_answers: [
           'Northampton Town',
@@ -1962,7 +1958,7 @@ export const quizzes = [
         category: 'Sports',
         type: 'multiple',
         difficulty: 'easy',
-        question: 'In what sport is a &quot;shuttlecock&quot; used?',
+        question: 'In what sport is a  shuttlecock  used?',
         correct_answer: 'Badminton',
         incorrect_answers: ['Table Tennis', 'Rugby', 'Cricket'],
       },
@@ -1979,7 +1975,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'easy',
         question:
-          'The Rio 2016 Summer Olympics held it&#039;s closing ceremony on what date?',
+          'The Rio 2016 Summer Olympics held it s closing ceremony on what date?',
         correct_answer: 'August 21',
         incorrect_answers: ['August 23', 'August 19', 'August 17'],
       },
@@ -2013,7 +2009,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'easy',
         question:
-          'This Canadian television sportscaster is known for his &quot;Hockey Night in Canada&quot; role, a commentary show during hockey games.',
+          'This Canadian television sportscaster is known for his  Hockey Night in Canada  role, a commentary show during hockey games.',
         correct_answer: 'Don Cherry',
         incorrect_answers: ['Don McKellar', 'Don Taylor ', 'Donald Sutherland'],
       },
@@ -2030,7 +2026,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'easy',
         question:
-          'Which boxer was banned for taking a bite out of Evander Holyfield&#039;s ear in 1997?',
+          'Which boxer was banned for taking a bite out of Evander Holyfield s ear in 1997?',
         correct_answer: 'Mike Tyson',
         incorrect_answers: [
           'Roy Jones Jr.',
@@ -2043,7 +2039,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'easy',
         question:
-          'Who is often called &quot;the Maestro&quot; in the men&#039;s tennis circuit?',
+          'Who is often called  the Maestro  in the men s tennis circuit?',
         correct_answer: 'Roger Federer',
         incorrect_answers: ['Bill Tilden', 'Boris Becker', 'Pete Sampras'],
       },
@@ -2069,7 +2065,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'easy',
         question:
-          '&quot;Stadium of Light&quot; is the home stadium for which soccer team?',
+          ' Stadium of Light  is the home stadium for which soccer team?',
         correct_answer: 'Sunderland FC',
         incorrect_answers: [
           'Barcelona FC',
@@ -2082,7 +2078,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'easy',
         question:
-          'Which year did Jenson Button won his first ever Formula One World Drivers&#039; Championship?',
+          'Which year did Jenson Button won his first ever Formula One World Drivers  Championship?',
         correct_answer: '2009',
         incorrect_answers: ['2010', '2007', '2006'],
       },
@@ -2090,8 +2086,7 @@ export const quizzes = [
         category: 'Sports',
         type: 'multiple',
         difficulty: 'easy',
-        question:
-          'Who won the 2017 Formula One World Drivers&#039; Championship?',
+        question: 'Who won the 2017 Formula One World Drivers  Championship?',
         correct_answer: 'Lewis Hamilton',
         incorrect_answers: [
           'Sebastian Vettel',
@@ -2135,8 +2130,7 @@ export const quizzes = [
         category: 'Sports',
         type: 'multiple',
         difficulty: 'medium',
-        question:
-          'Which German sportswear company&#039;s logo is the &#039;Formstripe&#039;?',
+        question: 'Which German sportswear company s logo is the  Formstripe ?',
         correct_answer: 'Puma',
         incorrect_answers: ['Nike', 'Adidas', 'Reebok'],
       },
@@ -2145,7 +2139,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'What is the nickname of Northampton town&#039;s rugby union club?',
+          'What is the nickname of Northampton town s rugby union club?',
         correct_answer: 'Saints',
         incorrect_answers: ['Harlequins', 'Saracens', 'Wasps'],
       },
@@ -2153,8 +2147,7 @@ export const quizzes = [
         category: 'Sports',
         type: 'multiple',
         difficulty: 'medium',
-        question:
-          'Which Formula One driver was nicknamed &#039;The Professor&#039;?',
+        question: 'Which Formula One driver was nicknamed  The Professor ?',
         correct_answer: 'Alain Prost',
         incorrect_answers: ['Ayrton Senna', 'Niki Lauda', 'Emerson Fittipaldi'],
       },
@@ -2210,7 +2203,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'In 2016, who won the Formula 1 World Constructor&#039;s Championship for the third time in a row?',
+          'In 2016, who won the Formula 1 World Constructor s Championship for the third time in a row?',
         correct_answer: 'Mercedes-AMG Petronas',
         incorrect_answers: [
           'Scuderia Ferrari',
@@ -2289,8 +2282,7 @@ export const quizzes = [
         category: 'Sports',
         type: 'multiple',
         difficulty: 'medium',
-        question:
-          'Who is Manchester United&#039;s top premier league goal scorer?',
+        question: 'Who is Manchester United s top premier league goal scorer?',
         correct_answer: 'Wayne Rooney',
         incorrect_answers: [
           'Sir Bobby Charlton',
@@ -2332,7 +2324,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'medium',
         question:
-          'Which of these countries&#039; national teams qualified for the 2018 FIFA World Cup in Russia?',
+          'Which of these countries  national teams qualified for the 2018 FIFA World Cup in Russia?',
         correct_answer: 'Tunisia',
         incorrect_answers: ['United States of America', 'Italy', 'Netherlands'],
       },
@@ -2360,7 +2352,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'hard',
         question:
-          'Which Italian footballer told Neuer where he&#039;s putting his shot and dragging it wide, during the match Italy-Germany, UEFA EURO 2016?',
+          'Which Italian footballer told Neuer where he s putting his shot and dragging it wide, during the match Italy-Germany, UEFA EURO 2016?',
         correct_answer: 'Pelle',
         incorrect_answers: ['Insigne', 'Barzagli', 'Giaccherini'],
       },
@@ -2395,7 +2387,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'hard',
         question:
-          'What is the full name of the footballer &quot;Cristiano Ronaldo&quot;?',
+          'What is the full name of the footballer  Cristiano Ronaldo ?',
         correct_answer: 'Cristiano Ronaldo dos Santos Aveiro',
         incorrect_answers: [
           'Cristiano Ronaldo los Santos Diego',
@@ -2417,7 +2409,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'hard',
         question:
-          'Which city features all of their professional sports teams&#039; jersey&#039;s with the same color scheme?',
+          'Which city features all of their professional sports teams  jersey s with the same color scheme?',
         correct_answer: 'Pittsburgh',
         incorrect_answers: ['New York', 'Seattle', 'Tampa Bay'],
       },
@@ -2426,7 +2418,7 @@ export const quizzes = [
         type: 'multiple',
         difficulty: 'hard',
         question:
-          'Which player &quot;kung-fu kicked&quot; a Crystal Palace fan in January 1995?',
+          'Which player  kung-fu kicked  a Crystal Palace fan in January 1995?',
         correct_answer: 'Eric Cantona',
         incorrect_answers: ['David Seamen', 'Ashley Cole', 'Mark Hughes'],
       },
@@ -2442,8 +2434,7 @@ export const quizzes = [
         category: 'Sports',
         type: 'multiple',
         difficulty: 'hard',
-        question:
-          'Which English football team is nicknamed &#039;The Tigers&#039;?',
+        question: 'Which English football team is nicknamed  The Tigers ?',
         correct_answer: 'Hull City',
         incorrect_answers: ['Cardiff City', 'Bristol City', 'Manchester City'],
       },
