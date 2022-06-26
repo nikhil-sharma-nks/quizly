@@ -22,7 +22,6 @@ export function makeServer({ environment = 'development' } = {}) {
       application: RestSerializer,
     },
     environment,
-    // TODO: Use Relationships to have named relational Data
     models: {
       category: Model,
       user: Model,
@@ -53,7 +52,7 @@ export function makeServer({ environment = 'development' } = {}) {
       this.get('/quiz', getAllQuizHandler.bind(this));
       this.get('/quiz/:quizId', getQuizHandler.bind(this));
 
-      // categories routes (private)
+      // categories routes (public)
       this.get('/categories', getAllCategoriesHandler.bind(this));
       this.get('/categories/:categoryId', getCategoryHandler.bind(this));
     },
