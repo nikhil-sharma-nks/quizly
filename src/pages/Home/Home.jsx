@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <div className='app-page home-page'>
         <div className='welcome-message'>
-          {authState.user.firstName
+          {authState.user?.firstName
             ? `Welcome ${authState.user.firstName}!`
             : 'Welcome!'}
         </div>
