@@ -1,16 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.scss';
 import { getAllQuizCollections } from '../../api';
 import { useQuiz, useAuth } from '../../context';
-import { QuizCard } from '../../components';
+import { QuizCard, Spinner } from '../../components';
 const Home = () => {
   const { quizState, quizDispatch } = useQuiz();
   const { authState } = useAuth();
   const { quizCollection } = quizState;
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     (async () => {
+      setLoading(true);
       const quizzes = await getAllQuizCollections();
       quizDispatch({ type: 'LOAD_QUIZ_COLLECTION', payload: quizzes });
+      setLoading(false);
     })();
   }, []);
   return (
@@ -25,11 +29,16 @@ const Home = () => {
           Are You Ready To Be Quizzed? Choose any one of the categories below to
           get started
         </div>
-        <div className='quiz-card-container'>
-          {quizCollection.categories?.map((quiz) => (
-            <QuizCard key={quiz.id} quiz={quiz} />
-          ))}
-        </div>
+
+        {loading ? (
+          <Spinner />
+        ) : (
+          <div className='quiz-card-container'>
+            {quizCollection.categories?.map((quiz) => (
+              <QuizCard key={quiz.id} quiz={quiz} />
+            ))}
+          </div>
+        )}
       </div>
     </>
   );
