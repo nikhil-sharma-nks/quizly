@@ -1,9 +1,13 @@
 .signup-page-container {
   width: fit-content;
   margin: 0 auto;
-  background-color: var(--background-color);
   color: var(--text-color);
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to right, #b993d6, #8ca6db);
   form {
+    border: none;
     transition: var(--default-transition);
     background-color: var(--background-color);
     input {
