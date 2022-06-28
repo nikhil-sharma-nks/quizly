@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-const getAllQuizCollections = async () => {
-  const getAllQuizCollectionBaseUrl = 'api/categories';
+const getAllQuizCategories = async () => {
+  const getAllQuizCategoriesBaseUrl = 'api/categories';
   try {
-    const { data: quizzes, status } = await axios.get(
-      getAllQuizCollectionBaseUrl
+    const { data: categories, status } = await axios.get(
+      getAllQuizCategoriesBaseUrl
     );
-    if (status >= 200 && status <= 300) return quizzes;
+    if (status >= 200 && status <= 300) return categories;
     else throw new Error('Could Not Get Quiz Collection');
   } catch (err) {
     console.log(err.message);
@@ -16,12 +16,42 @@ const getAllQuizCollections = async () => {
 const getQuizCategory = async (categoryId) => {
   const getCategpryBaseUrl = `/api/categories/${categoryId}`;
   try {
-    const { data: quiz, status } = await axios.get(getCategpryBaseUrl);
-    if (status >= 200 && status <= 300) return quiz;
+    const { data: category, status } = await axios.get(getCategpryBaseUrl);
+    if (status >= 200 && status <= 300) return category;
     else throw new Error('Could Not Get Quiz Collection');
   } catch (err) {
     console.log(err.message);
   }
 };
 
-export { getAllQuizCollections, getQuizCategory };
+const getSelectedQuiz = async (quizId) => {
+  const token = localStorage.getItem('token');
+  const getSelectedQuizBaseUrl = `/api/quiz/${quizId}`;
+  try {
+    const { data: quizzes, status } = await axios.get(getSelectedQuizBaseUrl, {
+      headers: {
+        authorization: token,
+      },
+    });
+    if (status >= 200 && status <= 300) return quizzes;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+const getAllQuiz = async () => {
+  const token = localStorage.getItem('token');
+  const getAllQuizBaseUrl = `/api/quiz`;
+  try {
+    const { data: quizzes, status } = await axios.get(getAllQuizBaseUrl, {
+      headers: {
+        authorization: token,
+      },
+    });
+    if (status >= 200 && status <= 300) return quizzes;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+export { getAllQuizCategories, getQuizCategory, getSelectedQuiz, getAllQuiz };
