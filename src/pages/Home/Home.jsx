@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import './home.scss';
-import { getAllQuizCollections } from '../../api';
+import { getAllQuizCategories } from '../../api';
 import { useQuiz, useAuth } from '../../context';
 import { QuizCard, Spinner } from '../../components';
 const Home = () => {
   const { quizState, quizDispatch } = useQuiz();
   const { authState } = useAuth();
-  const { quizCollection } = quizState;
+  const { categories } = quizState;
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     (async () => {
       setLoading(true);
-      const quizzes = await getAllQuizCollections();
-      quizDispatch({ type: 'LOAD_QUIZ_COLLECTION', payload: quizzes });
+      const categories = await getAllQuizCategories();
+      quizDispatch({ type: 'LOAD_QUIZ_CATEGORIES', payload: categories });
       setLoading(false);
     })();
   }, []);
@@ -34,7 +34,7 @@ const Home = () => {
           <Spinner />
         ) : (
           <div className='quiz-card-container'>
-            {quizCollection.categories?.map((quiz) => (
+            {categories.categories?.map((quiz) => (
               <QuizCard key={quiz.id} quiz={quiz} />
             ))}
           </div>

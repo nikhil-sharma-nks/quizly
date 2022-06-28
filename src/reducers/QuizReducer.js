@@ -1,10 +1,10 @@
 const QuizReducer = (state, action) => {
   const { type, payload } = action;
   switch (type) {
-    case 'LOAD_QUIZ_COLLECTION': {
+    case 'LOAD_QUIZ_CATEGORIES': {
       return {
         ...state,
-        quizCollection: payload,
+        categories: payload,
       };
     }
     default: {
