@@ -41,8 +41,20 @@ const QuizReducer = (state, action) => {
         },
       };
     }
+    case 'SEARCH_QUERY': {
+      return {
+        ...state,
+        searchQuery: payload,
+      };
+    }
     case 'LOGOUT': {
-      return { categories: [], difficulty: '', quantity: '', result: {} };
+      return {
+        categories: [],
+        difficulty: '',
+        quantity: '',
+        result: {},
+        searchQuery: '',
+      };
     }
     default: {
       return state;
