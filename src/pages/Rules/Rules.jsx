@@ -5,8 +5,6 @@ import { getQuizCategory } from '../../api';
 import { Spinner, makeToast } from '../../components';
 import { useQuiz } from '../../context';
 import Select from 'react-select';
-
-import Lottie from 'react-lottie';
 import ITS_A_QUIZ from '../../assets/animation/ITS_A_QUIZ.json';
 
 const Rules = () => {
@@ -26,14 +24,7 @@ const Rules = () => {
       setLoading(false);
     })();
   }, []);
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: ITS_A_QUIZ,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
+
   const styles = {
     option: (provided, state) => ({
       ...provided,
@@ -83,11 +74,8 @@ const Rules = () => {
   return (
     <>
       <div className='app-page rules-page'>
-        <div className='rules-intro-container'>
+        <div className='rules-intro-container my-3'>
           <p className='intro-msg'>I see You Are Ready To Be Quizzed!</p>
-          <div className='quiz-animation'>
-            <Lottie options={defaultOptions} />
-          </div>
         </div>
         {loading ? (
           <Spinner />
