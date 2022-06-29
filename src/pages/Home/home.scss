@@ -15,3 +15,21 @@
     align-items: center;
   }
 }
+
+@media (max-width: 700px) {
+  .home-page {
+    .welcome-message {
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+    .intro-message {
+      padding: 10px;
+      font-size: 1.3rem;
+    }
+    .quiz-card-container {
+      justify-content: center;
+      padding: 10px;
+    }
+  }
+}

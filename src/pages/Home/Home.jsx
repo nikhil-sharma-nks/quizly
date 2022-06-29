@@ -6,17 +6,17 @@ import { QuizCard, Spinner } from '../../components';
 const Home = () => {
   const { quizState, quizDispatch } = useQuiz();
   const { authState } = useAuth();
+  const { isAuth } = authState;
   const { categories } = quizState;
   const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     (async () => {
       setLoading(true);
-      const categories = await getAllQuizCategories();
+      const { categories } = await getAllQuizCategories();
       quizDispatch({ type: 'LOAD_QUIZ_CATEGORIES', payload: categories });
       setLoading(false);
     })();
-  }, []);
+  }, [isAuth]);
   return (
     <>
       <div className='app-page home-page'>
@@ -34,7 +34,7 @@ const Home = () => {
           <Spinner />
         ) : (
           <div className='quiz-card-container'>
-            {categories.categories?.map((quiz) => (
+            {categories?.map((quiz) => (
               <QuizCard key={quiz.id} quiz={quiz} />
             ))}
           </div>

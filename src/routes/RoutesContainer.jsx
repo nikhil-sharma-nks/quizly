@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Login, Signup, Home } from '../pages';
+import { Login, Signup, Home, Rules, Quiz } from '../pages';
 import AuthenticatedRoutes from './AuthenticatedRoutes';
 
 const RoutesContainer = () => {
@@ -12,9 +12,8 @@ const RoutesContainer = () => {
       <Route path='/signup' element={<Signup />} />
 
       <Route path='/' element={<AuthenticatedRoutes />}>
-        {/* <Route path='/home' element={<Home />} />
-        <Route path='/archive' element={<Archive />} />
-        <Route path='/trash' element={<Trash />} /> */}
+        <Route path='/rules/:categoryId' element={<Rules />} />
+        <Route path='/quiz/:quizId' element={<Quiz />} />
       </Route>
     </Routes>
   );
