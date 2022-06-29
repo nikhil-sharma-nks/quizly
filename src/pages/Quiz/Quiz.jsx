@@ -114,7 +114,7 @@ const Quiz = () => {
         finalScore,
       },
     });
-    navigate('/');
+    navigate('/result');
   };
 
   return (
