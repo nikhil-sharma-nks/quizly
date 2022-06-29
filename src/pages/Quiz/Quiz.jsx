@@ -117,6 +117,13 @@ const Quiz = () => {
     navigate('/result');
   };
 
+  const handleQuit = () => {
+    makeToast('Sorry To See You Go, Please Try A Quiz Again', 'info');
+    quizDispatch({ type: 'RESET_RESULTS' });
+    quizDispatch({ type: 'RESET_QUIZ_OPTIONS' });
+    navigate('/');
+  };
+
   return (
     <div className='app-page quiz-page'>
       <div className='quiz-container'>
@@ -155,7 +162,12 @@ const Quiz = () => {
                 ))}
             </div>
             <div className='button-container'>
-              <button className='btn btn-error-outlined btn-large'>Quit</button>
+              <button
+                className='btn btn-error-outlined btn-large'
+                onClick={handleQuit}
+              >
+                Quit
+              </button>
               {counter + 1 === quantity ? (
                 <button
                   className='btn btn-primary btn-large'
