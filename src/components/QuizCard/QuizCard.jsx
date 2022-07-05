@@ -4,10 +4,12 @@ import './quizCard.scss';
 
 const QuizCard = ({ quiz }) => {
   const navigate = useNavigate();
-  const handleQuizCardClick = () => {};
+  const handleQuizCardClick = () => {
+    navigate(`/rules/${quiz.id}`);
+  };
   return (
     <>
-      <div className='quiz-card'>
+      <div className='quiz-card' onClick={handleQuizCardClick}>
         <div className='quiz-image-container'>
           <img src={quiz.img} alt='quiz category' className='quiz-image' />
         </div>

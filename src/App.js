@@ -1,14 +1,16 @@
 import './App.scss';
 import { Navbar } from './components';
 import { useTheme } from './context';
-import { Home } from './pages';
+import RoutesContainer from './routes/RoutesContainer';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const { theme } = useTheme();
   return (
     <div className={`App theme-${theme}`}>
       <Navbar />
-      <Home />
+      <ToastContainer style={{ top: '5rem' }} />
+      <RoutesContainer />
     </div>
   );
 }

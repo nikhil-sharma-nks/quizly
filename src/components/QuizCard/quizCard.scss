@@ -6,6 +6,7 @@
   border-width: 5px;
   border-image-source: linear-gradient(to right, #b993d6, #8ca6db);
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
   .quiz-image-container {
     background-color: none;
     border-radius: 20px;
@@ -30,14 +31,12 @@
     .quiz-description {
       margin-top: 1rem;
     }
-    &:hover {
-      .quiz-name {
-        color: var(--primary-color);
-      }
-    }
   }
   &:hover {
     transform: translateY(-1rem);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    .quiz-name {
+      color: var(--primary-color);
+    }
   }
 }

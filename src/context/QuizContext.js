@@ -6,7 +6,11 @@ const useQuiz = () => useContext(QuizContent);
 
 const QuizProvider = ({ children }) => {
   const [quizState, quizDispatch] = useReducer(QuizReducer, {
-    quizCollection: [],
+    categories: [],
+    difficulty: '',
+    quantity: '',
+    result: {},
+    searchQuery: '',
   });
   return (
     <QuizContent.Provider value={{ quizState, quizDispatch }}>

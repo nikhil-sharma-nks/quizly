@@ -3,26 +3,26 @@ import { Link, useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from '../../context';
 import './navbar.scss';
-import { useAuth } from '../../context';
-// import { makeToast } from '../../components';
+import { useAuth, useQuiz } from '../../context';
+import { makeToast } from '../../components';
 import QUIZLY_LOGO from '../../assets/quizly-logo.png';
 
 const Navbar = () => {
   const navigate = useNavigate();
   const { theme, toggleTheme } = useTheme();
   const { authState, authDispatch } = useAuth();
-  // const { noteDispatch } = useNote();
+  const { quizDispatch } = useQuiz();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenuClick = () => setIsMenuOpen((prev) => !prev);
 
   const handleLogout = () => {
-    // makeToast('You Are Now Logged Out', 'success');
+    makeToast('You Are Now Logged Out', 'success');
     authDispatch({
       type: 'LOGOUT',
     });
-    // noteDispatch({ type: 'LOGOUT' });
+    quizDispatch({ type: 'LOGOUT' });
     navigate('/');
   };
 
@@ -36,7 +36,7 @@ const Navbar = () => {
 
   const handleAuth = () => {
     if (authState.isAuth) {
-      // handleLogout();
+      handleLogout();
     } else {
       navigate('/login');
     }
