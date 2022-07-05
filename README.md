@@ -1,5 +1,6 @@
 # QUIZLY
 Quizly is a modern quiz taking app with different categories of quiz available. 
+## [Live Link](https://quizly-app.netlify.app/)
 
 ## Tech Stack
 - React (useContext, useReducer, useEffect, useState)
