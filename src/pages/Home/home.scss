@@ -14,4 +14,63 @@
     justify-content: center;
     align-items: center;
   }
+  .navbar-search {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    background-color: var(--body-background-color);
+
+    input {
+      width: 100%;
+      border: none;
+      background-color: var(--body-background-color);
+      color: var(--text-color);
+    }
+    i {
+      padding: 10px 10px;
+      background-color: var(--body-background-color);
+    }
+    .search-cancel {
+      cursor: pointer;
+    }
+    .search-cancel:hover {
+      color: var(--error);
+    }
+    .search-btn {
+      cursor: pointer;
+      border-bottom: 1px solid var(--primary-color);
+    }
+    .filter-btn {
+    }
+    .filter-btn:hover {
+      cursor: pointer;
+      color: var(--primary-color);
+    }
+    .add-note-btn {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .home-page {
+    .welcome-message {
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+    .intro-message {
+      padding: 10px;
+      font-size: 1.3rem;
+    }
+    .navbar-search {
+      width: 90%;
+    }
+    .quiz-card-container {
+      justify-content: center;
+      padding: 10px;
+    }
+  }
 }

@@ -7,6 +7,55 @@ const QuizReducer = (state, action) => {
         categories: payload,
       };
     }
+    case 'LOAD_QUIZ_OPTIONS': {
+      const { difficulty, quantity } = payload;
+      return {
+        ...state,
+        difficulty,
+        quantity,
+      };
+    }
+    case 'LOAD_RESULTS': {
+      const { attemptedQuestions, finalScore } = payload;
+      return {
+        ...state,
+        result: {
+          attemptedQuestions,
+          finalScore,
+        },
+      };
+    }
+    case 'RESET_QUIZ_OPTIONS': {
+      return {
+        ...state,
+        difficulty: '',
+        quantity: '',
+      };
+    }
+    case 'RESET_RESULTS': {
+      return {
+        ...state,
+        result: {
+          attemptedQuestions: '',
+          finalScore: '',
+        },
+      };
+    }
+    case 'SEARCH_QUERY': {
+      return {
+        ...state,
+        searchQuery: payload,
+      };
+    }
+    case 'LOGOUT': {
+      return {
+        categories: [],
+        difficulty: '',
+        quantity: '',
+        result: {},
+        searchQuery: '',
+      };
+    }
     default: {
       return state;
     }
