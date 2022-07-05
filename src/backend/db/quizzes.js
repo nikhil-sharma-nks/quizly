@@ -854,48 +854,6 @@ export const quizzes = [
         correct_answer: 'Natural History Museum',
         incorrect_answers: ['Tate', 'British Museum', 'Science Museum'],
       },
-      {
-        category: 'General Knowledge',
-        type: 'multiple',
-        difficulty: 'medium',
-        question: 'What is the full title of the Prime Minister of the UK?',
-        correct_answer: 'First Lord of the Treasury',
-        incorrect_answers: [
-          'Duke of Cambridge',
-          'Her Majesty s Loyal Opposition',
-          'Manager of the Crown Estate',
-        ],
-      },
-      {
-        category: 'General Knowledge',
-        type: 'multiple',
-        difficulty: 'medium',
-        question:
-          'The Fields Medal, one of the most sought after awards in mathematics, is awarded every how many years?',
-        correct_answer: '4',
-        incorrect_answers: ['3', '5', '6'],
-      },
-      {
-        category: 'General Knowledge',
-        type: 'multiple',
-        difficulty: 'medium',
-        question:
-          'Frank Lloyd Wright was the architect behind what famous building?',
-        correct_answer: 'The Guggenheim',
-        incorrect_answers: [
-          'Villa Savoye',
-          'Sydney Opera House',
-          'The Space Needle',
-        ],
-      },
-      {
-        category: 'General Knowledge',
-        type: 'multiple',
-        difficulty: 'medium',
-        question: 'What fast food chain has the most locations globally? ',
-        correct_answer: 'Subway',
-        incorrect_answers: ['Starbucks', 'McDonalds', 'KFC'],
-      },
     ],
     hard: [
       {
@@ -972,6 +930,48 @@ export const quizzes = [
           'A feverish desire to rip one s clothes off',
           'The inability to stand up',
         ],
+      },
+      {
+        category: 'General Knowledge',
+        type: 'multiple',
+        difficulty: 'hard',
+        question: 'What is the full title of the Prime Minister of the UK?',
+        correct_answer: 'First Lord of the Treasury',
+        incorrect_answers: [
+          'Duke of Cambridge',
+          'Her Majesty s Loyal Opposition',
+          'Manager of the Crown Estate',
+        ],
+      },
+      {
+        category: 'General Knowledge',
+        type: 'multiple',
+        difficulty: 'hard',
+        question:
+          'The Fields Medal, one of the most sought after awards in mathematics, is awarded every how many years?',
+        correct_answer: '4',
+        incorrect_answers: ['3', '5', '6'],
+      },
+      {
+        category: 'General Knowledge',
+        type: 'multiple',
+        difficulty: 'hard',
+        question:
+          'Frank Lloyd Wright was the architect behind what famous building?',
+        correct_answer: 'The Guggenheim',
+        incorrect_answers: [
+          'Villa Savoye',
+          'Sydney Opera House',
+          'The Space Needle',
+        ],
+      },
+      {
+        category: 'General Knowledge',
+        type: 'multiple',
+        difficulty: 'hard',
+        question: 'What fast food chain has the most locations globally? ',
+        correct_answer: 'Subway',
+        incorrect_answers: ['Starbucks', 'McDonalds', 'KFC'],
       },
     ],
   },

@@ -29,6 +29,18 @@
   --body-background-color: #262d3a;
   --text-color: #ffffff;
   --background-color-secondary: hsl(0, 0%, 37%);
+  background: #536976; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #292e49,
+    #536976
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #292e49,
+    #536976
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  --linear-gradient: linear-gradient(to right, #292e49, #536976);
 }
 
 .theme-light {
@@ -36,6 +48,18 @@
   --body-background-color: #f1eaea;
   --text-color: #030303;
   --background-color-secondary: rgba(0, 0, 0, 0.05);
+  background: #dae2f8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #d6a4a4,
+    #dae2f8
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #d6a4a4,
+    #dae2f8
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  --linear-gradient: linear-gradient(to right, #d6a4a4, #dae2f8);
 }
 
 .main-body {
@@ -46,9 +70,8 @@
   width: 100%;
 }
 
-.app-body {
-  display: grid;
-  grid-template-columns: var(--grid-template);
+.app-page {
+  color: var(--text-color);
   min-height: calc(100vh - 4rem);
   width: 100%;
 }

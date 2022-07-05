@@ -1,0 +1,109 @@
+.quiz-page {
+  width: 100%;
+  padding: 4rem 0;
+  .quiz-container {
+    width: 70%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to right, #b993d6, #8ca6db);
+    padding: 2rem;
+    .question-container {
+      text-align: center;
+      font-size: 2rem;
+    }
+    .quiz-info-container {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.3rem;
+    }
+    .options-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      font-size: 1.5rem;
+      align-self: center;
+      align-items: center;
+      min-width: 60%;
+      .option {
+        background-color: var(--body-background-color);
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        border-radius: 20px;
+        cursor: pointer;
+        &:hover,
+        .isSelected {
+          background-color: var(--primary-color);
+          color: var(--white);
+        }
+      }
+      .isSelected {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+    }
+    .button-container {
+      margin-top: 1rem;
+      width: 60%;
+      display: flex;
+      align-self: center;
+      justify-content: space-between;
+    }
+    .progress-bar {
+      //   animation: progress 10s linear;
+      height: 1rem;
+      background-color: var(--error);
+      border-radius: 20px;
+      transition: all linear 1s;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .quiz-page {
+    width: 100%;
+    height: fit-content;
+    padding: 4rem 0;
+    .quiz-container {
+      width: 90%;
+      height: fit-content;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .question-container {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .quiz-info-container {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+      }
+      .options-container {
+        gap: 1.5rem;
+        font-size: 1rem;
+        align-self: center;
+        align-items: center;
+        width: 100%;
+        .option {
+          width: 100%;
+          padding: 1rem 0;
+        }
+      }
+      .button-container {
+        margin: 1rem 0;
+        width: 100%;
+      }
+      .progress-bar {
+        height: 10px;
+      }
+    }
+  }
+}
