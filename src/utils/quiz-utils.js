@@ -18,4 +18,11 @@ const shuffleOptions = (options) => {
   return [...shuffledOptions];
 };
 
-export { getRandomQuestions, getRandomNumber, shuffleOptions };
+const filterBySearch = (searchQuery, categories) => {
+  if (searchQuery === '') return categories;
+  return categories.filter((category) =>
+    category.categoryName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+};
+
+export { getRandomQuestions, getRandomNumber, shuffleOptions, filterBySearch };

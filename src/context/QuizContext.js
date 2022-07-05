@@ -10,6 +10,7 @@ const QuizProvider = ({ children }) => {
     difficulty: '',
     quantity: '',
     result: {},
+    searchQuery: '',
   });
   return (
     <QuizContent.Provider value={{ quizState, quizDispatch }}>

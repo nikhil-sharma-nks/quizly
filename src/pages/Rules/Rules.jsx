@@ -5,13 +5,11 @@ import { getQuizCategory } from '../../api';
 import { Spinner, makeToast } from '../../components';
 import { useQuiz } from '../../context';
 import Select from 'react-select';
-import ITS_A_QUIZ from '../../assets/animation/ITS_A_QUIZ.json';
 
 const Rules = () => {
   const { categoryId } = useParams();
   const navigate = useNavigate();
-  const { quizState, quizDispatch } = useQuiz();
-  const { categories } = quizState;
+  const { quizDispatch } = useQuiz();
   const [loading, setLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState({});
   const [selectedDifficulty, setSelectedDifficulty] = useState('');
@@ -61,6 +59,7 @@ const Rules = () => {
       makeToast('Please Select Quantity To Proceed With Quiz', 'error');
       return;
     }
+    quizDispatch({ type: 'RESET_RESULTS' });
     quizDispatch({
       type: 'LOAD_QUIZ_OPTIONS',
       payload: {
