@@ -4,12 +4,15 @@ import './result.scss';
 import { useQuiz } from '../../context';
 import { makeToast } from '../../components';
 import { shuffleOptions } from '../../utils';
+import { Question } from '../../types';
 
 const Result = () => {
   const { quizState } = useQuiz();
   const navigate = useNavigate();
   const { result } = quizState;
-  const { finalScore, attemptedQuestions } = result;
+  const { finalScore, attemptedQuestions }: any = result;
+  type AttemptedQuestion = Question & { attempted: string };
+
   useEffect(() => {
     if (!attemptedQuestions) {
       makeToast('Got to play a quiz to see the result', 'info');
@@ -17,13 +20,13 @@ const Result = () => {
     }
   }, []);
 
-  const getShuffledOptions = (questionItem) =>
+  const getShuffledOptions = (questionItem: any) =>
     shuffleOptions([
-      ...questionItem.incorrect_answers,
-      questionItem.correct_answer,
+      ...questionItem?.incorrect_answers,
+      questionItem?.correct_answer,
     ]);
 
-  const checkIfWrong = (questionItem, option) =>
+  const checkIfWrong = (questionItem: AttemptedQuestion, option: any) =>
     option === questionItem.attempted &&
     questionItem.attempted !== questionItem.correct_answer;
 
@@ -33,11 +36,11 @@ const Result = () => {
         You Have Scored {finalScore}/{attemptedQuestions?.length * 10} Points!
       </div>
       <div className='questions-container'>
-        {attemptedQuestions?.map((item, index) => (
+        {attemptedQuestions?.map((item: AttemptedQuestion, index: number) => (
           <div className='question' key={index}>
             <div className='question-container'>{item.question}</div>
             <div className='options-container'>
-              {getShuffledOptions(item).map((option, index) => (
+              {getShuffledOptions(item).map((option: any, index) => (
                 <div
                   className={`option ${
                     checkIfWrong(item, option) ? 'wrong-answer' : ''

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useTheme } from '../../context';
 import './navbar.scss';
 import { useAuth, useQuiz } from '../../context';
-import { makeToast } from '../../components';
+import { makeToast } from '..';
 import QUIZLY_LOGO from '../../assets/quizly-logo.png';
 
 const Navbar = () => {

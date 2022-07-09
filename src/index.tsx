@@ -8,7 +8,9 @@ import { ThemeProvider, AuthProvider, QuizProvider } from './context';
 
 makeServer();
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
 root.render(
   <React.StrictMode>
     <AuthProvider>
