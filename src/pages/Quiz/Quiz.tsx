@@ -5,6 +5,7 @@ import { useQuiz } from '../../context';
 import { Spinner, makeToast } from '../../components';
 import { getSelectedQuiz } from '../../api';
 import { getRandomQuestions, shuffleOptions } from '../../utils';
+import { Question } from '../../types';
 
 const Quiz = () => {
   const { quizId } = useParams();
@@ -14,17 +15,23 @@ const Quiz = () => {
 
   const [loading, setLoading] = useState(false);
   const [selectedQuiz, setSelectedQuiz] = useState([]);
-  const [selectedQuestions, setSelectedQuestions] = useState([]);
-  const [attemptedQuestions, setAttemptedQuestions] = useState([]);
+  const [selectedQuestions, setSelectedQuestions] = useState(
+    [] as Question | any
+  );
+  const [attemptedQuestions, setAttemptedQuestions] = useState(
+    [] as Question[]
+  );
   const [counter, setCounter] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
-  const [options, setOptions] = useState([]);
+  const [options, setOptions] = useState([] as string[] | any);
   const incrementCounter = () => setCounter((current) => current + 1);
   const [timer, setTimer] = useState(30);
-  const id = useRef(null);
+  const id = useRef<any>(null);
   const clear = () => {
-    window.clearInterval(id.current);
+    if (id.current !== null) {
+      window.clearInterval(id.current);
+    }
   };
   useEffect(() => {
     id.current = window.setInterval(() => {
@@ -36,7 +43,7 @@ const Quiz = () => {
   useEffect(() => {
     if (timer === 0) {
       clear();
-      counter + 1 === quantity ? handleSubmit() : handleNext();
+      counter + 1 === Number(quantity) ? handleSubmit() : handleNext();
     }
   }, [timer]);
 
@@ -54,7 +61,7 @@ const Quiz = () => {
         setLoading(true);
         const { quiz } = await getSelectedQuiz(quizId);
         setSelectedQuiz(quiz);
-        const data = getRandomQuestions(quiz[difficulty], quantity);
+        const data: any = getRandomQuestions(quiz[difficulty], quantity);
         setSelectedQuestions(data);
         const optionsShuffled = shuffleOptions([
           ...data[counter]?.incorrect_answers,
@@ -77,7 +84,7 @@ const Quiz = () => {
       setOptions([...optionsShuffled]);
     }
   }, [counter]);
-  const handleOptionClick = (option) => setSelectedOption(option);
+  const handleOptionClick = (option: string) => setSelectedOption(option);
 
   const addToAttempted = () => {
     const attempted = {
@@ -147,7 +154,7 @@ const Quiz = () => {
             ></div>
             <div className='options-container'>
               {options &&
-                options?.map((option) => (
+                options?.map((option: any) => (
                   <div
                     className={
                       option === selectedOption
@@ -168,7 +175,7 @@ const Quiz = () => {
               >
                 Quit
               </button>
-              {counter + 1 === quantity ? (
+              {counter + 1 === Number(quantity) ? (
                 <button
                   className='btn btn-primary btn-large'
                   onClick={handleSubmit}

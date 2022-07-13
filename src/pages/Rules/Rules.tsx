@@ -11,7 +11,7 @@ const Rules = () => {
   const navigate = useNavigate();
   const { quizDispatch } = useQuiz();
   const [loading, setLoading] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState({});
+  const [selectedCategory, setSelectedCategory] = useState({} as any);
   const [selectedDifficulty, setSelectedDifficulty] = useState('');
   const [selectedQuantity, setSelectedQuantity] = useState('');
   useEffect(() => {
@@ -24,11 +24,11 @@ const Rules = () => {
   }, []);
 
   const styles = {
-    option: (provided, state) => ({
+    option: (provided: any, state: any) => ({
       ...provided,
       color: 'black',
     }),
-    singleValue: (provided, state) => ({
+    singleValue: (provided: any, state: any) => ({
       ...provided,
       fontSize: state.selectProps.myFontSize,
     }),
@@ -43,10 +43,10 @@ const Rules = () => {
     { value: 5, label: '5' },
     { value: 10, label: '10' },
   ];
-  const handleDifficultyChange = (selectedOption) => {
+  const handleDifficultyChange = (selectedOption: any) => {
     setSelectedDifficulty(selectedOption?.value || '');
   };
-  const handleQuantityChange = (selectedOption) => {
+  const handleQuantityChange = (selectedOption: any) => {
     setSelectedQuantity(selectedOption?.value || '');
   };
 
@@ -103,7 +103,6 @@ const Rules = () => {
                     onChange={handleDifficultyChange}
                     options={DifficultyOptions}
                     styles={styles}
-                    // value={noteState.filter.sortBy}
                     placeholder='Difficulty'
                     className='select-box'
                     isClearable
@@ -117,7 +116,6 @@ const Rules = () => {
                     onChange={handleQuantityChange}
                     options={Quantity}
                     styles={styles}
-                    // value={noteState.filter.sortBy}
                     placeholder='Number of questions'
                     className='select-box'
                     isClearable

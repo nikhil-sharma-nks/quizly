@@ -1,14 +1,15 @@
-const QuizReducer = (state, action) => {
-  const { type, payload } = action;
+import { QuizStateType, QuizActionType } from '../types';
+const QuizReducer = (state: QuizStateType, action: QuizActionType) => {
+  const { type } = action;
   switch (type) {
     case 'LOAD_QUIZ_CATEGORIES': {
       return {
         ...state,
-        categories: payload,
+        categories: action.payload,
       };
     }
     case 'LOAD_QUIZ_OPTIONS': {
-      const { difficulty, quantity } = payload;
+      const { difficulty, quantity } = action.payload;
       return {
         ...state,
         difficulty,
@@ -16,7 +17,7 @@ const QuizReducer = (state, action) => {
       };
     }
     case 'LOAD_RESULTS': {
-      const { attemptedQuestions, finalScore } = payload;
+      const { attemptedQuestions, finalScore } = action.payload;
       return {
         ...state,
         result: {
@@ -44,7 +45,7 @@ const QuizReducer = (state, action) => {
     case 'SEARCH_QUERY': {
       return {
         ...state,
-        searchQuery: payload,
+        searchQuery: action.payload,
       };
     }
     case 'LOGOUT': {

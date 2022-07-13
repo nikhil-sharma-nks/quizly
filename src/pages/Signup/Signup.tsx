@@ -14,7 +14,7 @@ const Signup = () => {
     password: '',
     confirmPassword: '',
   });
-  const inputChangeHandler = (event) => {
+  const inputChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setSignupInput({
       ...signupInput,
@@ -22,12 +22,14 @@ const Signup = () => {
     });
   };
   useEffect(() => {
-    const isAuth = JSON.parse(localStorage.getItem('isAuth'));
+    const isAuth = JSON.parse(localStorage.getItem('isAuth')!);
     if (isAuth) {
       navigate('/');
     }
   }, []);
-  const handleSignupSubmit = async (event) => {
+  const handleSignupSubmit = async (
+    event: React.FormEvent<HTMLFormElement>
+  ) => {
     event.preventDefault();
     if (signupInput.password !== signupInput.confirmPassword) {
       makeToast("Password Doesn't match! Please Try Again", 'error');

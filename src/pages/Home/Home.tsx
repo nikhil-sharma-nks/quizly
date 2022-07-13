@@ -4,6 +4,7 @@ import { getAllQuizCategories } from '../../api';
 import { useQuiz, useAuth } from '../../context';
 import { QuizCard, Spinner } from '../../components';
 import { filterBySearch } from '../../utils';
+import { Categories } from '../../types';
 const Home = () => {
   const { quizState, quizDispatch } = useQuiz();
   const { authState } = useAuth();
@@ -27,7 +28,7 @@ const Home = () => {
     setQuizToDisplay([...notesFilterBySearch]);
   }, [searchQuery]);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     quizDispatch({
       type: 'SEARCH_QUERY',
       payload: e.target.value,
@@ -71,7 +72,7 @@ const Home = () => {
           <Spinner />
         ) : (
           <div className='quiz-card-container'>
-            {quizToDisplay?.map((quiz) => (
+            {quizToDisplay?.map((quiz: Categories) => (
               <QuizCard key={quiz.id} quiz={quiz} />
             ))}
           </div>

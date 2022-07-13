@@ -18,14 +18,18 @@ const Login = () => {
     email: 'nikhil.harsh.sharma@gmail.com',
     password: 'nikhil123',
   };
+  type LoginInput = {
+    email: string;
+    password: string;
+  };
   useEffect(() => {
-    const isAuth = JSON.parse(localStorage.getItem('isAuth'));
+    const isAuth: string = JSON.parse(localStorage.getItem('isAuth')!);
     if (isAuth) {
       navigate('/');
     }
   }, []);
 
-  const loginHandler = async (event, loginInput) => {
+  const loginHandler = async (event: any, loginInput: LoginInput) => {
     event.preventDefault();
     setLoading(true);
     try {
@@ -55,14 +59,16 @@ const Login = () => {
     }
   };
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setLoginInput((input) => ({
       ...input,
       [name]: value,
     }));
   };
-  const selectTestCredentials = (event) => {
+  const selectTestCredentials = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     event.preventDefault();
     setLoginInput({ ...testCredentials });
     loginHandler(event, testCredentials);

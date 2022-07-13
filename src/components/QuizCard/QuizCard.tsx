@@ -1,8 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './quizCard.scss';
-
-const QuizCard = ({ quiz }) => {
+import { Categories } from '../../types';
+type QuizCategory = {
+  quiz: Categories;
+};
+const QuizCard = ({ quiz }: QuizCategory) => {
   const navigate = useNavigate();
   const handleQuizCardClick = () => {
     navigate(`/rules/${quiz.id}`);
