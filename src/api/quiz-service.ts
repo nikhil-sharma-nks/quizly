@@ -6,6 +6,7 @@ const getAllQuizCategories = async () => {
     const { data: categories, status } = await axios.get(
       getAllQuizCategoriesBaseUrl
     );
+
     if (status >= 200 && status <= 300) return categories;
     else throw new Error('Could Not Get Quiz Collection');
   } catch (err) {
@@ -13,7 +14,7 @@ const getAllQuizCategories = async () => {
   }
 };
 
-const getQuizCategory = async (categoryId) => {
+const getQuizCategory = async (categoryId: any) => {
   const getCategpryBaseUrl = `/api/categories/${categoryId}`;
   try {
     const { data: category, status } = await axios.get(getCategpryBaseUrl);
@@ -24,8 +25,8 @@ const getQuizCategory = async (categoryId) => {
   }
 };
 
-const getSelectedQuiz = async (quizId) => {
-  const token = localStorage.getItem('token');
+const getSelectedQuiz = async (quizId: any) => {
+  const token: string = localStorage.getItem('token')!;
   const getSelectedQuizBaseUrl = `/api/quiz/${quizId}`;
   try {
     const { data: quizzes, status } = await axios.get(getSelectedQuizBaseUrl, {
@@ -40,7 +41,7 @@ const getSelectedQuiz = async (quizId) => {
 };
 
 const getAllQuiz = async () => {
-  const token = localStorage.getItem('token');
+  const token: string = localStorage.getItem('token')!;
   const getAllQuizBaseUrl = `/api/quiz`;
   try {
     const { data: quizzes, status } = await axios.get(getAllQuizBaseUrl, {

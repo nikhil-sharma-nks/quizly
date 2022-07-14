@@ -17,10 +17,6 @@ const AuthReducer = (state: AuthStateType, action: AuthActionType) => {
       saveToLocalStorage({ ...state, ...action.payload });
       return { ...state, ...action.payload };
     }
-    // case 'SIGNUP_USER': {
-    //   saveToLocalStorage({ ...state, ...payload });
-    //   return { ...state, ...payload };
-    // }
     case 'LOGOUT': {
       saveToLocalStorage({ isAuth: false, token: '', user: {} });
       return { isAuth: false, token: '', user: {} };

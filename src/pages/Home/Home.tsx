@@ -12,7 +12,6 @@ const Home = () => {
   const { categories, searchQuery } = quizState;
   const [loading, setLoading] = useState(false);
   const [quizToDisplay, setQuizToDisplay] = useState(categories);
-
   useEffect(() => {
     (async () => {
       setLoading(true);

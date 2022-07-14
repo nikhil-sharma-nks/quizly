@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const loginUser = async (loginCreds) => {
+const loginUser = async (loginCreds: any) => {
   const loginBaseUrl = '/api/auth/login';
   try {
     const { data, status } = await axios.post(loginBaseUrl, loginCreds);
@@ -13,7 +13,7 @@ const loginUser = async (loginCreds) => {
   }
 };
 
-const signupUser = async (signupCred) => {
+const signupUser = async (signupCred: any) => {
   const signupBaseUrl = '/api/auth/signup';
   try {
     const { data, status } = await axios.post(signupBaseUrl, signupCred);

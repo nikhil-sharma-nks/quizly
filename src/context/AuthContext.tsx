@@ -6,12 +6,14 @@ const AuthContext = createContext({} as AuthContextType);
 
 const useAuth = () => useContext(AuthContext);
 
+const AuthInitialState = {
+  isAuth: false,
+  token: '',
+  user: {},
+};
+
 const AuthProvider = ({ children }: ReactChildrenType) => {
-  const [authState, authDispatch] = useReducer(AuthReducer, {
-    isAuth: false,
-    token: '',
-    user: {},
-  });
+  const [authState, authDispatch] = useReducer(AuthReducer, AuthInitialState);
   useEffect(() => {
     try {
       const localObj = {
@@ -29,4 +31,4 @@ const AuthProvider = ({ children }: ReactChildrenType) => {
   );
 };
 
-export { useAuth, AuthProvider };
+export { useAuth, AuthProvider, AuthInitialState };

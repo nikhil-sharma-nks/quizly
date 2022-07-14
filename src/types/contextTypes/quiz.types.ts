@@ -2,7 +2,7 @@ type Question = {
   category: string;
   type: string;
   difficulty: string;
-  question: string;
+  question: number;
   correct_answer: string;
   incorrect_answers: string[];
 };
@@ -29,7 +29,7 @@ type QuizStateType = {
 };
 type LoadCategoriesType = {
   type: 'LOAD_QUIZ_CATEGORIES';
-  payload: QuizStateType;
+  payload: any;
 };
 type LoadQuizOptions = {
   type: 'LOAD_QUIZ_OPTIONS';
