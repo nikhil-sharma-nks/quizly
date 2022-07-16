@@ -3,7 +3,9 @@ Quizly is a modern quiz taking app with different categories of quiz available.
 ## [Live Link](https://quizly-app.netlify.app/)
 
 ## Tech Stack
+- Typescript
 - React (useContext, useReducer, useEffect, useState)
+- Testing
 - React Router
 - SCSS
 - Mock Backend - Mockbee, MirajeJs
