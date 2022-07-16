@@ -1,7 +1,6 @@
 .auth-page {
   min-height: calc(100vh - 4rem);
-  min-height: 100vh; // height: fit-content;
-
+  min-height: 100vh; 
   .login-page-container-betterme {
     transition: var(--default-transition);
     margin: 0 auto;

@@ -1,10 +1,10 @@
 .navigationbar-container {
+  caret-color: transparent;
   position: sticky;
   z-index: 5;
   top: 0;
   color: var(--text-color);
   background-color: var(--background-color);
-  // box-shadow: 12px 12px 12px 2px var(--background-color);
   .navbar {
     .navbar-header {
       .menu-hamburg {

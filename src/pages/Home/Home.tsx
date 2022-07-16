@@ -56,25 +56,30 @@ const Home = () => {
             }
           ></i>
         </div>
-        <div className='welcome-message'>
-          {authState.user?.firstName
-            ? `Welcome ${authState.user.firstName}!`
-            : 'Welcome!'}
-        </div>
 
-        <div className='intro-message'>
-          Are You Ready To Be Quizzed? Choose any one of the categories below to
-          get started
-        </div>
-
-        {loading ? (
-          <Spinner />
+        {quizToDisplay.length > 0 ? (
+          <>
+            <div className='welcome-message'>
+              {authState.user?.firstName
+                ? `Welcome ${authState.user.firstName}!`
+                : 'Welcome!'}
+            </div>
+            <div className='intro-message'>
+              Are You Ready To Be Quizzed? Choose any one of the categories
+              below to get started
+            </div>
+            {loading ? (
+              <Spinner />
+            ) : (
+              <div className='quiz-card-container'>
+                {quizToDisplay?.map((quiz: Categories) => (
+                  <QuizCard key={quiz.id} quiz={quiz} />
+                ))}
+              </div>
+            )}
+          </>
         ) : (
-          <div className='quiz-card-container'>
-            {quizToDisplay?.map((quiz: Categories) => (
-              <QuizCard key={quiz.id} quiz={quiz} />
-            ))}
-          </div>
+          <p className='text-centered text-xl mt-4'>No Quiz Found</p>
         )}
       </div>
     </>

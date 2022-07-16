@@ -19,7 +19,7 @@ const getQuizCategory = async (categoryId: any) => {
   try {
     const { data: category, status } = await axios.get(getCategpryBaseUrl);
     if (status >= 200 && status <= 300) return category;
-    else throw new Error('Could Not Get Quiz Collection');
+    else throw new Error('Could Not Get Quiz Category');
   } catch (err) {
     console.log(err.message);
   }

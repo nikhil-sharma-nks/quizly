@@ -1,4 +1,4 @@
-import { Question, Quiz, Categories } from '../types';
+import { Question, Categories } from '../types';
 const getRandomNumber = (max: number) => Math.floor(Math.random() * max);
 
 const getRandomQuestions = (questions: Question[], quantity: number) => {

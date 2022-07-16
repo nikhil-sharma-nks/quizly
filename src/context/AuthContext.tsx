@@ -22,7 +22,9 @@ const AuthProvider = ({ children }: ReactChildrenType) => {
         isAuth: JSON.parse(localStorage.getItem('isAuth')!),
       };
       authDispatch({ type: 'LOGIN_USER', payload: localObj });
-    } catch (err) {}
+    } catch (err) {
+      console.log(err.message);
+    }
   }, []);
   return (
     <AuthContext.Provider value={{ authState, authDispatch }}>
