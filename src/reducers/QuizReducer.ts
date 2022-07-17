@@ -30,7 +30,7 @@ const QuizReducer = (state: QuizStateType, action: QuizActionType) => {
       return {
         ...state,
         difficulty: '',
-        quantity: '',
+        quantity: 0,
       };
     }
     case 'RESET_RESULTS': {
@@ -38,7 +38,7 @@ const QuizReducer = (state: QuizStateType, action: QuizActionType) => {
         ...state,
         result: {
           attemptedQuestions: '',
-          finalScore: '',
+          finalScore: 0,
         },
       };
     }
@@ -52,8 +52,11 @@ const QuizReducer = (state: QuizStateType, action: QuizActionType) => {
       return {
         categories: [],
         difficulty: '',
-        quantity: '',
-        result: {},
+        quantity: 0,
+        result: {
+          attemptedQuestions: '',
+          finalScore: 0,
+        },
         searchQuery: '',
       };
     }
