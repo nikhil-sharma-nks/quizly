@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './signup.scss';
-import { signupUser } from '../../api';
+import { signupUser, loginUser } from '../../api';
 import { makeToast, Spinner } from '../../components';
+import { useAuth } from '../../context';
 
 const Signup = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const { authDispatch } = useAuth();
+
   const [signupInput, setSignupInput] = useState({
     firstName: '',
     lastName: '',
@@ -14,6 +17,10 @@ const Signup = () => {
     password: '',
     confirmPassword: '',
   });
+  type LoginInput = {
+    email: string;
+    password: string;
+  };
   const inputChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setSignupInput({
@@ -27,6 +34,37 @@ const Signup = () => {
       navigate('/');
     }
   }, []);
+
+  const loginHandler = async (event: any, loginInput: LoginInput) => {
+    event.preventDefault();
+    setLoading(true);
+    try {
+      const data = await loginUser(loginInput);
+      if (data) {
+        const { encodedToken, foundUser } = data;
+        const authData = {
+          token: encodedToken,
+          user: foundUser,
+          isAuth: true,
+        };
+        makeToast(
+          `Login successful, Welcome ${foundUser.firstName}`,
+          'success'
+        );
+        delete authData.user.password;
+        delete authData.user.confirmPassword;
+        authDispatch({ type: 'LOGIN_USER', payload: authData });
+        navigate('/');
+      } else {
+        makeToast('Login Failed, Try Again!', 'error');
+      }
+    } catch (error) {
+      makeToast('Login Failed, Try Again!', 'error');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleSignupSubmit = async (
     event: React.FormEvent<HTMLFormElement>
   ) => {
@@ -39,8 +77,12 @@ const Signup = () => {
     try {
       const data = await signupUser(signupInput);
       if (data) {
-        makeToast('Signup successful, You can now log in!', 'success');
-        navigate('/login');
+        makeToast('Signup successful!', 'success');
+        loginHandler(event, {
+          email: signupInput.email,
+          password: signupInput.password,
+        });
+        // navigate('/login');
       } else {
         makeToast('Signup Failed, Try Again!', 'error');
       }
@@ -50,6 +92,51 @@ const Signup = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const demoSignUp = [
+    {
+      firstName: 'Jon',
+      lastName: 'Doe',
+      email: 'jondoe@gmail.com',
+      password: '123123',
+      confirmPassword: '123123',
+    },
+    {
+      firstName: 'Virat',
+      lastName: 'Kholi',
+      email: 'viratKholi@gmail.com',
+      password: '123123',
+      confirmPassword: '123123',
+    },
+    {
+      firstName: 'MS',
+      lastName: 'Dhoni',
+      email: 'MSD@gmail.com',
+      password: '123123',
+      confirmPassword: '123123',
+    },
+    {
+      firstName: 'Kishore',
+      lastName: 'Kumar',
+      email: 'kishore_kumar@gmail.com',
+      password: '123123',
+      confirmPassword: '123123',
+    },
+    {
+      firstName: 'Mohd.',
+      lastName: 'Rafi',
+      email: 'mohd_rafi@gmail.com',
+      password: '123123',
+      confirmPassword: '123123',
+    },
+  ];
+
+  const fillDemoData = () => {
+    const randomDemoInput = Math.floor(Math.random() * demoSignUp.length);
+    setSignupInput({
+      ...demoSignUp[randomDemoInput],
+    });
   };
 
   return (
@@ -140,22 +227,15 @@ const Signup = () => {
                 ) : (
                   ''
                 )}
-
-                <div className='form-options-container mt-4'>
-                  <div>
-                    <input
-                      type='checkbox'
-                      id='rememberMe'
-                      name='subscribe'
-                      value='newsletter'
-                    />
-                    <label className='ml-1' htmlFor='rememberMe'>
-                      I accept all terms and conditions
-                    </label>
-                  </div>
-                </div>
                 <button className='btn btn-primary mt-3' type='submit'>
                   Sign Up
+                </button>
+                <button
+                  className='btn btn-primary-outlined mt-3'
+                  onClick={fillDemoData}
+                  type='button'
+                >
+                  Fill Demo Data
                 </button>
                 <div className='mt-3 text-centered'>
                   <Link to='/login' className='sign-up-link'>

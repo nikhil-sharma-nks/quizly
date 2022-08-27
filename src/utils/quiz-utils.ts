@@ -1,7 +1,7 @@
 import { Question, Categories } from '../types';
 const getRandomNumber = (max: number) => Math.floor(Math.random() * max);
 
-const getRandomQuestions = (questions: Question[], quantity: number) => {
+const getRandomQuestions = (questions: any, quantity: number) => {
   const randomQuestion = new Set();
   while (randomQuestion.size < quantity) {
     const temp = questions[getRandomNumber(questions.length)];
@@ -20,9 +20,12 @@ const shuffleOptions = (options: any[]) => {
 };
 
 const filterBySearch = (searchQuery: string, categories: Categories[]) => {
-  if (searchQuery === '') return categories;
+  if (searchQuery.trim() === '') return categories;
   return categories.filter((category) =>
-    category.categoryName.toLowerCase().includes(searchQuery.toLowerCase())
+    category.categoryName
+
+      .toLowerCase()
+      .includes(searchQuery.trim().toLowerCase())
   );
 };
 

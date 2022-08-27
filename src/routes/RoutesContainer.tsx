@@ -1,6 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Login, Signup, Home, Rules, Quiz, Result } from '../pages';
+import {
+  Login,
+  Signup,
+  Home,
+  Rules,
+  Quiz,
+  Result,
+  Profile,
+  ErrorPage,
+} from '../pages';
 import AuthenticatedRoutes from './AuthenticatedRoutes';
 
 const RoutesContainer = () => {
@@ -15,6 +24,8 @@ const RoutesContainer = () => {
         <Route path='/rules/:categoryId' element={<Rules />} />
         <Route path='/quiz/:quizId' element={<Quiz />} />
         <Route path='/result' element={<Result />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='*' element={<ErrorPage />} />
       </Route>
     </Routes>
   );
