@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './home.scss';
 import { getAllQuizCategories } from '../../api';
 import { useQuiz, useAuth } from '../../context';
-import { QuizCard, Spinner } from '../../components';
+import { QuizCard, Spinner, Error, makeToast } from '../../components';
 import { filterBySearch } from '../../utils';
 import { Categories } from '../../types';
 const Home = () => {
@@ -79,7 +79,23 @@ const Home = () => {
             )}
           </>
         ) : (
-          <p className='text-centered text-xl mt-4'>No Quiz Found</p>
+          <Error>
+            <p className='text-xl'>No Quiz Found</p>
+            <div>
+              <button
+                className='btn btn-primary'
+                onClick={() => {
+                  quizDispatch({
+                    type: 'SEARCH_QUERY',
+                    payload: '',
+                  });
+                  makeToast('Search Cleared', 'success');
+                }}
+              >
+                Clear Search
+              </button>
+            </div>
+          </Error>
         )}
       </div>
     </>

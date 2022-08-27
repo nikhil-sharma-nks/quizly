@@ -6,6 +6,7 @@ import { Spinner, makeToast } from '../../components';
 import { getSelectedQuiz } from '../../api';
 import { getRandomQuestions, shuffleOptions } from '../../utils';
 import { Question } from '../../types';
+import { quizzes } from '../../backend/db/quizzes';
 
 const Quiz = () => {
   const { quizId } = useParams();
@@ -70,6 +71,17 @@ const Quiz = () => {
         setOptions([...optionsShuffled]);
       } catch (error) {
         console.log(error.message);
+        const quiz: any = quizzes.find((quiz) => quiz.id === quizId);
+        setSelectedQuiz(quiz);
+        if (quiz) {
+          const data: any = getRandomQuestions(quiz[difficulty], quantity);
+          setSelectedQuestions(data);
+          const optionsShuffled = shuffleOptions([
+            ...data[counter]?.incorrect_answers,
+            data[counter]?.correct_answer,
+          ]);
+          setOptions([...optionsShuffled]);
+        }
       } finally {
         setLoading(false);
       }
